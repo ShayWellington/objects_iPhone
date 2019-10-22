@@ -8,7 +8,7 @@ console.log('Objects');
 
 */
 
-var phone = [
+var iphone = [
   {
     name: "iPhone 11",
     photo: "images/iphone11.jpg",
@@ -131,18 +131,73 @@ var phone = [
   }
 ];
 
+
+// all iphones
+
 function allPhones(){
   document.getElementById('iphone').innerHTML = " ";
 for(var i = 0; i < iphone.length; i++) {
   document.getElementById('iphone').innerHTML
   +=  '<div class="card" style="width: 18rem;">'
-  +   ihpone[i].photo + 'class="card-img-top"'
+  +   iphone[i].photo + 'class="card-img-top"'
   +  '<div class="card-body">'
   +     '<h1 class="card-title">' + iphone[i].name + '</h1>'
-  +     '<h5>' + iphone[i].display + '</h5>'
+  +     '</br> display: <h5>' + iphone[i].display + '</h5>'
+  +     '</br> colours: <h5>' + iphone[i].colours + '</h5>'
+  +     '</br> headphoneJack: <h5>' + iphone[i].headphoneJack + '</h5>'
+  +     '</br> outdated: <h5>' + iphone[i].outdated + '</h5>'
   +     '<a href="#" class="btn btn-primary">Go somewhere</a>'
   +   '</div>'
-  + '</div>'
-;
+  + '</div>' ;
 }
 }
+
+// headphoneJack
+
+document.getElementById('headphoneJack').addEventListener('click', function(){
+console.log(iphone);
+document.getElementById('iphone').innerHTML = " "; //to clear the container
+for(var i = 0; i < iphone.length; i++) {
+  if (iphone[i].headphoneJack === true){
+    document.getElementById('iphone').innerHTML
+    +=  '<div class="card" style="width: 18rem;">'
+    +   iphone[i].photo + 'class="card-img-top"'
+    +  '<div class="card-body">'
+    +     '<h1 class="card-title">' + iphone[i].name + '</h1>'
+    +     '</br> display: <h5>' + iphone[i].display + '</h5>'
+    +     '</br> colours: <h5>' + iphone[i].colours + '</h5>'
+    +     '</br> headphoneJack: <h5>' + iphone[i].headphoneJack + '</h5>'
+    +     '</br> outdated: <h5>' + iphone[i].outdated + '</h5>'
+    +     '<a href="#" class="btn btn-primary">Go somewhere</a>'
+    +   '</div>'
+    + '</div>' ;
+    }
+  }
+});
+
+//outdated
+
+document.getElementById('outdated').addEventListener('click', function(){
+console.log(iphone);
+document.getElementById('iphone').innerHTML = " "; //to clear the container
+for(var i = 0; i < iphone.length; i++) {
+  if (iphone[i].outdated === true){
+    document.getElementById('iphone').innerHTML
+    +=  '<div class="card" style="width: 18rem;">'
+    +   iphone[i].photo + 'class="card-img-top"'
+    +  '<div class="card-body">'
+    +     '<h1 class="card-title">' + iphone[i].name + '</h1>'
+    +     '</br> display: <h5>' + iphone[i].display + '</h5>'
+    +     '</br> colours: <h5>' + iphone[i].colours + '</h5>'
+    +     '</br> headphoneJack: <h5>' + iphone[i].headphoneJack + '</h5>'
+    +     '</br> outdated: <h5>' + iphone[i].outdated + '</h5>'
+    +     '<a href="#" class="btn btn-primary">Go somewhere</a>'
+    +   '</div>'
+    + '</div>' ;
+    }
+  }
+});
+
+document.getElementById('all').addEventListener('click', function(){
+  allPhones();
+});

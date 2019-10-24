@@ -1,13 +1,5 @@
 console.log('Objects');
 
-/*
------------ Alogirthm -----------
-1) Details of phones are stored
-2) User Input (textbox)
-3) 3 Buttons (For all, headphoneJack, Outdated, Colour)
-
-*/
-
 var iphone = [
   {
     name: "iPhone 11",
@@ -15,6 +7,8 @@ var iphone = [
     display: 6.1,
     colours: ["Purple", " Yellow", " Green", " Black", " White", " Red"],
     roseGold: false,
+    silver: false,
+    black: false,
     headphoneJack: false,
     outdated: false
   },
@@ -24,6 +18,8 @@ var iphone = [
     display: 5.8,
     colours: ["Silver", " Black", " Rose Gold"],
     roseGold: true,
+    silver: true,
+    black: true,
     headphoneJack: false,
     outdated: false
   },
@@ -33,6 +29,8 @@ var iphone = [
     display: 5.8,
     colours: ["Silver", " Black"],
     roseGold: false,
+    silver: true,
+    black: true,
     headphoneJack: false,
     outdated: false
   },
@@ -42,6 +40,8 @@ var iphone = [
     display: 4.7,
     colours: ["Silver", " Black", " Rose Gold"],
     roseGold: true,
+    silver: true,
+    black: true,
     headphoneJack: false,
     outdated: false
   },
@@ -51,6 +51,8 @@ var iphone = [
     display: 4.7,
     colours: ["Silver", " Black", " Gold", " Rose Gold"],
     roseGold: true,
+    silver: true,
+    black: true,
     headphoneJack: false,
     outdated: false
   },
@@ -60,6 +62,8 @@ var iphone = [
     display: 4.7,
     colours: ["Space Grey", " Silver", " Gold"],
     roseGold: false,
+    silver: true,
+    black: false,
     headphoneJack: true,
     outdated: false
   },
@@ -69,6 +73,8 @@ var iphone = [
     display: 4,
     colours: ["Space Grey", " Silver", " Gold", " Rose Gold"],
     roseGold: true,
+    silver: true,
+    black: false,
     headphoneJack: true,
     outdated: true
   },
@@ -78,6 +84,8 @@ var iphone = [
     display: 4,
     colours: ["Space Grey", " Silver", " Gold"],
     roseGold: false,
+    silver: true,
+    black: false,
     headphoneJack: true,
     outdated: true
   },
@@ -87,6 +95,8 @@ var iphone = [
     display: 4,
     colours: ["Blue", " Green", " Yellow", " Pink", " White"],
     roseGold: false,
+    silver: false,
+    black: false,
     headphoneJack: true,
     outdated: true
   },
@@ -96,6 +106,8 @@ var iphone = [
     display: 4,
     colours: ["Space Grey", " Silver"],
     roseGold: false,
+    silver: true,
+    black: false,
     headphoneJack: true,
     outdated: true
   },
@@ -105,6 +117,8 @@ var iphone = [
     display: 3.5,
     colours: ["Black", " White"],
     roseGold: false,
+    silver: false,
+    black: true,
     headphoneJack: true,
     outdated: true
   },
@@ -113,6 +127,9 @@ var iphone = [
     photo: "images/iphone4.jpg",
     display: 3.5,
     colours: ["Black"],
+    roseGold: false,
+    silver: false,
+    black: true,
     headphoneJack: true,
     outdated: true
   },
@@ -122,6 +139,8 @@ var iphone = [
     display: 3.5,
     colours: ["Black", " Silver"],
     roseGold: false,
+    silver: true,
+    black: true,
     headphoneJack: true,
     outdated: true
   },
@@ -131,6 +150,8 @@ var iphone = [
     display: 3.5,
     colours: ["Black", " Silver"],
     roseGold: false,
+    silver: true,
+    black: true,
     headphoneJack: true,
     outdated: true
   },
@@ -140,6 +161,8 @@ var iphone = [
     display: 3.5,
     colours: ["Silver"],
     roseGold: false,
+    silver: true,
+    black: false,
     headphoneJack: true,
     outdated: true
   }
@@ -152,7 +175,7 @@ function allPhones(){
   document.getElementById('iphone').innerHTML = " ";
 for(var i = 0; i < iphone.length; i++) {
   document.getElementById('iphone').innerHTML
-  +='<div class="card text-center">'
+  +='<div class=" text-center">'
   +  '<img class="card-img-top mx-auto" style="max-width:30rem" src="' + iphone[i].photo + ' " alt="iPhone/>"'
   +  '<div class="card-body">'
   +     '<h1 class="card-title">' + iphone[i].name  + '</h1>'
@@ -174,8 +197,8 @@ document.getElementById('headphoneJack').addEventListener('click', function(){
   for(var i = 0; i < iphone.length; i++) {
     if (iphone[i].headphoneJack === true){
       document.getElementById('iphone').innerHTML
-      +='<div class="card text-center">'
-      +   '<img class="card-img-top mx-auto" style="max-width:30rem" src="' + iphone[i].photo + ' " alt="iPhone/>"'
+      +='<div class="text-center">'
+      +  '<img class="card-img-top mx-auto" style="max-width:30rem" src="' + iphone[i].photo + ' " alt="iPhone/>"'
       +  '<div class="card-body">'
       +     '<h1 class="card-title">' + iphone[i].name + '</h1>'
       +     'Display: <h5>' + iphone[i].display + '"' + '</h5>'
@@ -197,8 +220,8 @@ document.getElementById('iphone').innerHTML = " ";
 for(var i = 0; i < iphone.length; i++) {
   if (iphone[i].outdated === true){
     document.getElementById('iphone').innerHTML
-    +=  '<div class="card text-center">'
-    +   '<img class="card-img-top mx-auto" style="max-width:30rem" src="' + iphone[i].photo + ' " alt="iPhone/>"'
+    +='<div class="text-center">'
+    +  '<img class="card-img-top mx-auto" style="max-width:30rem" src="' + iphone[i].photo + ' " alt="iPhone/>"'
     +  '<div class="card-body">'
     +     '<h1 class="card-title">' + iphone[i].name + '</h1>'
     +     'Display: <h5>' + iphone[i].display + '"' + '</h5>'
@@ -213,14 +236,61 @@ for(var i = 0; i < iphone.length; i++) {
 });
 
 //rosegold
+
 document.getElementById('roseGold').addEventListener('click', function(){
 console.log(iphone);
 document.getElementById('iphone').innerHTML = " ";
 for(var i = 0; i < iphone.length; i++) {
   if (iphone[i].roseGold === true){
     document.getElementById('iphone').innerHTML
-    +=  '<div class="card text-center">'
-    +   '<img class="card-img-top mx-auto" style="max-width:30rem" src="' + iphone[i].photo + ' " alt="iPhone/>"'
+    +='<div class="text-center">'
+    +  '<img class="card-img-top mx-auto" style="max-width:30rem" src="' + iphone[i].photo + ' " alt="iPhone/>"'
+    +  '<div class="card-body">'
+    +     '<h1 class="card-title">' + iphone[i].name + '</h1>'
+    +     'Display: <h5>' + iphone[i].display + '"' + '</h5>'
+    +     'Colours: <h5>' + iphone[i].colours + '</h5>'
+    +     'Headphone jack: <h5>' + iphone[i].headphoneJack + '</h5>'
+    +     'Outdated: <h5>' + iphone[i].outdated + '</h5>'
+    +   '</div>'
+    + '</div>'
+    + '</br></br>' ;
+    }
+  }
+});
+
+//silver
+
+document.getElementById('silver').addEventListener('click', function(){
+console.log(iphone);
+document.getElementById('iphone').innerHTML = " ";
+for(var i = 0; i < iphone.length; i++) {
+  if (iphone[i].silver === true){
+    document.getElementById('iphone').innerHTML
+    +='<div class="text-center">'
+    +  '<img class="card-img-top mx-auto" style="max-width:30rem" src="' + iphone[i].photo + ' " alt="iPhone/>"'
+    +  '<div class="card-body">'
+    +     '<h1 class="card-title">' + iphone[i].name + '</h1>'
+    +     'Display: <h5>' + iphone[i].display + '"' + '</h5>'
+    +     'Colours: <h5>' + iphone[i].colours + '</h5>'
+    +     'Headphone jack: <h5>' + iphone[i].headphoneJack + '</h5>'
+    +     'Outdated: <h5>' + iphone[i].outdated + '</h5>'
+    +   '</div>'
+    + '</div>'
+    + '</br></br>' ;
+    }
+  }
+});
+
+//black
+
+document.getElementById('black').addEventListener('click', function(){
+console.log(iphone);
+document.getElementById('iphone').innerHTML = " ";
+for(var i = 0; i < iphone.length; i++) {
+  if (iphone[i].black === true){
+    document.getElementById('iphone').innerHTML
+    +='<div class="text-center">'
+    +  '<img class="card-img-top mx-auto" style="max-width:30rem" src="' + iphone[i].photo + ' " alt="iPhone/>"'
     +  '<div class="card-body">'
     +     '<h1 class="card-title">' + iphone[i].name + '</h1>'
     +     'Display: <h5>' + iphone[i].display + '"' + '</h5>'

@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css"/>
@@ -12,24 +12,51 @@
   </head>
   <body class="container">
 
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <!-- <a class="nav-item nav-link active" id="all">All</a> -->
+          <button id="all" type="button" class="btn">All iPhones</button>
+          <!-- <a class="nav-item nav-link active" id="headphoneJack">Headphone Jack</a> -->
+          <button id="headphoneJack" type="button" class="btn">iPhones with headphone jack</button>
+          <!-- <a class="nav-item nav-link active" id="outdated">Outdated</a> -->
+          <button id="outdated" type="button" class="btn">Outdated iPhones</button>
+
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Colours
+            </button>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" id="roseGold">Rose Gold</a>
+              <a class="dropdown-item" id="silver">Silver</a>
+              <a class="dropdown-item" id="black">Black</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <h1 class="display-2">iPhones</h1>
-    </br>
-
-    <button id="all" type="button" class="btn btn-secondary">All iPhones</button>
-    <button id="headphoneJack" type="button" class="btn btn-secondary">iPhones with headphone jack</button>
-    <button id="outdated" type="button" class="btn btn-secondary">Outdated iPhones</button>
-    <button id="roseGold" type="button" class="btn btn-secondary">Rose Gold iPhones</button>
-    </br>
-    </br>
-
+    <br>
+    <br>
     <!-- user input -->
 
     <div>
       <h1 class="text "> If you want to change the name of the iPhones, <br> then enter them below</h1>
-      </br>
+      <br>
+
       <label for="oldName" class="text h4"> Enter the old name </label> </br>
       <input type="text" class="form-control" id="oldName" placeholder="Enter the old name"/>
-      </br>
+      <br>
       <label for="newName" class="text h4" > Enter a new name </label> </br>
 
       <input type="text" class="form-control" id="newName" placeholder="Enter a new name"/>
